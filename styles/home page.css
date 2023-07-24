@@ -1,5 +1,4 @@
 body{
-    /* text-transform: capitalize; */
     padding: 0 .5vw;
 }
   /* CLASSES AND IDS FOR EDITING */
@@ -8,7 +7,6 @@ body{
     margin: 0;
   }
   #pageFont{
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     font-family: 'Belanosima';
   }
   .center{
@@ -71,59 +69,68 @@ body{
     font-size: 2vw;
   }
 /* NAVIGATION BAR */
-.navigation-bar-container{
+.navContainer{
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 1030;
-  margin-left: .5vw;
-  margin-right: .5vw;
-}
-.navigation-bar{
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-content: center;
   background-color: rgba(3, 7, 10, 0.1);
-  padding:2vw 3vw 1.5vw 3vw;
+  padding: 1vw;
 }
-.navigation-bar #navB{
-  font-size: 1.6vw;
-  margin: 0;
-  background-color: rgba(3, 7, 10, 0.1);
-  border: .1vw solid white;
-  color: white;
+.navContainer a{
   text-transform: capitalize;
-  border-radius: 2vw;
-  padding: .2vw 1vw .2vw 1vw;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.navigation-bar #navB:hover{
-  background-color: white;
-  color: black;
-}
-.nav-txt{
-  font-size: 2vw;
+  color: white;
   text-decoration: none;
-  color: white;
-  text-transform: capitalize;
+  padding: 1vw;
+  font-size: 1.6vw;
 }
-#navColor{
-  height: 5.7vw;
-}
-.mid-section{
+.navContainer .company{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  margin-left: 1vw;
 }
-  .mid-section a{
-    margin-left: 1vw;
-    margin-right: 1vw;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .nav-txt:hover{
-    text-decoration: overline;
-    color: white;
-  }
+.navContainer .company a{
+  font-size: 1.6vw;
+}
+.navContainer .midSection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navContainer .midSection a{
+  margin-left: 2vw;
+  margin-right: 2vw;
+  border-radius: 1vw;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.navContainer .midSection a:hover{
+  color: black;
+  background-color: white;
+  transform: scale(1.05);
+}
+.navContainer .Bookbut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navContainer .Bookbut button {
+  font-size: 1.6vw;
+  text-transform: capitalize;
+  padding: 1vw;
+  border: .1vw solid white;
+  border-radius: 1vw;
+  background-color: rgba(3, 7, 10, 0.1);
+  color: white;
+}
+.dropdown{
+  display: none;
+}
   /*SEARCH BAR */
  .search-container {
   position: absolute;
@@ -132,10 +139,18 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.search-container img{
+.search-container .subber{
+  display: flex;
+  align-items: center;
+}
+.search-container .searchimg{
   position: absolute;
-  margin: 1vw 0 0 2vw;
+  width: 2.6vw;
+  z-index: 1;
+  margin-left: 1vw;
 }
 .search-input {
   background-color: rgb(249, 249, 252);
@@ -143,7 +158,7 @@ body{
   position: relative;
   padding: 1% 1% 1% 6%;
   border-radius: 30px;
-  width: 70vw;
+  width: 70vw; 
   font-size: 1.5vw;
 }
 .search-button {
@@ -161,55 +176,51 @@ body{
 .search-button:hover {
   background-color: rgb(2, 129, 248);
 }
+/* CAROUSEL*/
 /* CAROUSEL BUTTONS */
-#nextArrow,#previousArrow{
+.nextArrow,.previousArrow{
   width: 5vw;
   height: 7vw;
 }
-#nextArrow{
+.nextArrow{
   position:absolute;
   z-index: 1;
   top: 28vw;
   right: 3vw;
 }
-#previousArrow{
+.previousArrow{
   position:absolute;
   z-index: 1;
   left: 3vw;
   top: 28vw;
 }
-/* CAROUSEL*/
 /* Carousel base class */
 .carousel {
     margin-bottom: 4rem;
   }
   .my-carousel-edit{
-    position: relative;}
+    position: relative;
+  }
   /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
     bottom: 3rem;
     z-index: 10;
   }
-  #carousel-caption{
+  .container .carousel-caption{
     bottom: 12vw;
   }
   #heading1{
     font-size: 6vw;
     text-transform: capitalize;
-    /* font-family: 'Belanosima'; */
   }
   #snippet{
     font-size: 2vw;
     text-transform: capitalize;
-    /* font-family: 'Belanosima'; */
   }
   /* Declare heights because of positioning of img element */
   .carousel-item {
-    height: 50vw;
+    height: 55vw;
   }
-  /* #top-carousel-item{
-    height: 100%;
-  } */
   .carousel-control-prev-icon,.carousel-control-next-icon{
     transform: scale(1);
     filter: invert(100%);
@@ -217,7 +228,6 @@ body{
   /* SLIDER/SELECT DESTINATION */
   .slider{
     width: 80%;
-    height: 15vw;
     border-radius: 1vw;
     background-color: white;
     padding: 3vw;
@@ -227,19 +237,24 @@ body{
     z-index: 1;
     top: 45vw;
     left: 10vw;
+    display: flex;
+    flex-direction: row;
   }
   .date{
     width: 100%;
     height: 100%;
     padding: 1%;
     flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .date #selectDestination{
+  .date .selectDestination{
     font-size: 2.5vw;
     font-weight: 600;
     text-transform: capitalize;
   }
-  .date #dateT{
+  .date .dateT{
     width: 30vw;
     border-radius: 2vw;
     border: .1vw solid rgb(190,220,248);
@@ -260,12 +275,12 @@ body{
     text-transform: capitalize;
     width: 100%;
     padding: 7%;
-    transition: all .3s ease;
+    transition: background-color .3s ease;
   }
   .filters button:hover{
     background-color: black;
   }
-  .filters button #filterImg{
+  .filters button .filterImg{
     margin: 3.5% 0 0 4% ;
     height: 1.5vw;
   }
@@ -276,17 +291,18 @@ body{
     flex-direction: column;
     justify-content: space-between;
   }
-  .price p.float-container{
+  .price .pricey{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
     font-size: 1.5vw;
     text-transform: capitalize;
     font-weight: 600;
   }
-  .currencySymbol{
-    margin-left: 11vw;
-    color: rgb(23, 23, 23);
-  }
-  .rangeValue{
-    color: rgb(23, 23, 23);
+  .price .pricey .two{
+    display: flex;
   }
   /* THE RANGE SLIDER */
   .rangeInput{
@@ -339,7 +355,6 @@ body{
     width: 2vw;
     height: 2vw;
   }
-  
   /* THE POPULAR DESTINATIONS */
   .popularDestinations{
     margin-top: 20vw;
@@ -394,21 +409,18 @@ body{
   .rating{
     width: 7vw;
     text-align: center;
-    /* padding: 1% 3% 1% 1%; */
     background-color: white;
     position: absolute;
     z-index: 1;
-    top: 17.3vw;
+    top: 16.6vw;
     font-size: 2vw;
     border-radius: 0 1vw 0 0;
     color: rgb(252,167,0);
   }
-  .cardBotL{
+  .grid .content2 .cardBotLL{
     padding-top: 1.5vw;
     font-size: 2.5vw;
     text-transform: capitalize;
-  }
-  #cardBotL{
     margin: 0;
   }
   .cardBotL img{
@@ -420,6 +432,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     font-size: 2vw;
   }
   .contSub img{
@@ -428,16 +441,14 @@ body{
     height: 4.5vw;
     width: 4.5vw;
   }
-  #contsub{
+  .grid .contsubL{
     margin: 0;
     padding: 3%;
   }
   .contSub .bubu{
     text-align: center;
-    height: 3.5vw;
-    width: 6.5vw;
-    font-size: 1.6vw;
-    margin-top: 2vw;
+    padding: 2% 3%;
+    font-size: 1.7vw;
   }
   .bubu{
     text-transform: capitalize;
@@ -466,13 +477,13 @@ body{
   .grid1 .content2{
     flex: 1;
   }
-  .grid1 .content2 #head{
+  .grid1 .content2 .head{
     font-size: 2.5vw;
     text-transform: capitalize;
     font-weight: 600;
     margin: 0;
   }
-  .grid1 .content2 #snip{
+  .grid1 .content2 .snip{
     font-size: 1.8vw;
     margin: 0;
     padding-top: .1vw;
@@ -483,15 +494,13 @@ body{
     width: 2.5vw;
     height: 2.5vw;
   }
-  .grid1 .content2 #snippy{
-    font-size: 1.8vw;
-    margin: 0;
-  }
   .grid1 .content2 .snippy{
     display: flex;
     padding-bottom:.5vw;
     padding-top: .5vw;
     justify-content: space-between;
+    font-size: 1.8vw;
+    margin: 0;
   }
   .grid1 .content2 .dollar img{
     height: 2.5vw;
@@ -499,7 +508,7 @@ body{
     margin-right: 2vw;
     padding: .1vw;
   }
-  .grid1 .content2 #texty{
+  .grid1 .content2 .texty{
     font-size: 1.4vw;
     margin: 0;
     padding-top: .4vw;
@@ -508,9 +517,6 @@ body{
     font-size: 1.5vw;
     padding: 3%;
     margin-top: .3vw;
-  }
-  .grid2{
-    margin-left: 1vw;
   }
   /* THE STUFF IN BETWEEN */
   .more-button{
@@ -532,8 +538,9 @@ body{
     margin: 5vw 0 3vw 0;
   }
   .what-to-offer-txt{
-    margin:  0 30vw 6vw 30vw;
+    margin-bottom: 8vw;
     text-align: center;
+    padding: 0 30%;
   }
   /* CARDS */
   .cards-container{
@@ -543,7 +550,7 @@ body{
   .card-design{
     width: 23%;
     padding: 1%;
-    height: 30vw;
+    height: 35vw;
     border: .2vw solid rgb(116, 186, 237);
     border-radius: 2vw;
     transition:background-color 0.2s ease, border 0.3s ease, border-radius 0.3s ease;
@@ -551,12 +558,9 @@ body{
   .card-number{
     background-color: rgb(59, 153, 243);
     font-size: 3.5vw;
-    width: 8vw;
-    height: 6vw;
     text-align: center;
     border-radius: 50%;
-    margin: 0 0 0 0;
-    padding:  0 0 0 0;
+    padding: 5% 15%;
     transition: color 0.3s ease-in-out;
   } 
   .card-hover .card-number{
@@ -571,7 +575,7 @@ body{
   }
   .card-text{
     text-align: center;
-    font-size: 1vw;
+    font-size: 2vw;
     margin: 6vw 0 0 0;
   }
   .card-hover:hover{
@@ -681,6 +685,7 @@ body{
 }
 .actual-photo{
   position: relative;
+  cursor: pointer;
 }
 .picture-gallery .txt{  
   position: absolute;
@@ -722,7 +727,7 @@ body{
 .photo-n img{
   border-radius: 1vw;
 }
-#never-miss{
+.center .never-miss{
   font-size: 2.5vw;
   margin: 0 0 6vw 0;
 }
@@ -733,7 +738,7 @@ body{
   padding: 1.2vw;
   width: 80vw;
 }
-#keep-in-touch-p{
+.keep-in-touch-p{
   margin: -1vw 0 0 8vw;
   font-size: 3vw;
   color: white;
@@ -742,25 +747,20 @@ body{
 .input-cont{
   margin-right: 2.4vw;
 }
-#email{
-  width: 15vw;
+.keep-in-touch .email{
   font-size: 1.2vw;
-  padding: .6vw 1vw .6vw 1vw;
-  margin-left: 1vw;
-  margin-right: 1vw;
+  padding: 2% 4%;
   background-color: white;
   border: none;
   border-radius: .8vw;
 }
 .send-btn{
-  width: 6vw;
   font-size: 1.2vw;
   text-transform: capitalize;
   color: rgb(59,153,243);
   font-weight: 600;
-  padding: .6vw 1vw .6vw 1vw;
+  padding: 2% 5%;
   margin-left: 1vw;
-  margin-right: 1vw;
   background-color: white;
   border: none;
   border-radius: .8vw;
@@ -784,7 +784,7 @@ body{
   text-align: left;
   margin-right: 10vw;
 }
-#travelgram-1-h{
+.travelgram-1-h{
   font-size: 2vw;
   text-transform: capitalize;
   font-weight: 700;
@@ -802,7 +802,7 @@ body{
   color: black;
   text-transform: capitalize;
 }
-#travelgram-2-h{
+.travelgram-2-h{
   font-size: 2vw;
   text-transform: capitalize;
   margin-left: -4vw;
@@ -831,11 +831,367 @@ body{
   text-transform: capitalize;
 }
 .social img:hover{
-  /* background-color: rgb(112, 182, 248); */
   box-shadow: 0 0 2px 2px rgb(209, 210, 219);
+  cursor: pointer;
 }
 .header-rule{
   background-color: rgb(212, 209, 209);
   height: .4vw;
   margin: 1vw 4vw 0 4vw;
+}
+/* RESPONSIVENESS */
+/* @media screen and (min-width:360px) and (max-width:200px) 
+{
+} */
+@media (max-width:576px) {
+  /* NAVIGATION BAR */
+  .navContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .navContainer .midSection {
+    display: none;
+  }
+  .navContainer .company a{
+      font-size: 5vw;
+      margin-right: 30vw;
+  }
+  .navContainer .Bookbut{
+      display: none;
+  }
+  .navContainer .dropdown{
+    display: inline-block;
+  }
+  .navContainer .dropdown-btn {
+    background-color: rgba(3, 7, 10, 0.1);
+    color: white;
+    text-transform: capitalize;
+    font-size: 3vw;
+    padding: 0 4vw;
+    border: .1vw solid white;
+    border-radius: 1vw;
+    transition: background-color 0.3s ease;
+  }
+  .navContainer .dropdown-btn:hover {
+    background-color: white;
+    color: black;
+  }
+  .navContainer .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(3, 7, 10, 0.1);
+    z-index: 1;
+    padding: 1vw;
+    text-align: center;
+  }
+  .navContainer .dropdown-content a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 3vw;
+    border-radius: 1vw;
+    line-height: 2;
+  }
+  .navContainer .dropdown-content a:hover {
+    background-color: black;
+    color: white;
+  }
+  .navContainer .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .navContainer .dropdown-content button{
+    background-color: rgba(3, 7, 10, 0.1);
+    color: white;
+    text-transform: capitalize;
+    font-size: 3vw;
+    padding: 0 3vw;
+    border: .1vw solid white;
+    border-radius: 1vw;
+    transition: background-color 0.3s ease;
+    margin-top: 1vw;
+  }
+  .navContainer .dropdown-content button:hover{
+    background-color: black;
+    color: white;
+  }
+  /* SEARCH BAR */
+  /* search container */
+  .search-container{
+    top: 17vw;
+    width: 90%;
+    align-items: center;
+  }
+  .search-input{
+    width: 90vw;
+    font-size: 4vw;
+  }
+  .search-button{
+    font-size: 4vw;
+    width: 20%;
+  }
+  .search-container .searchimg{
+    width: 4.3vw;
+  }
+  .subber .searchimg{
+    height: 3vw;
+    margin-left: 3vw;
+  }
+  .subber .search-input{
+    font-size: 3vw;
+    padding-left: 10%;
+  }
+  .subber .search-button{
+    font-size: 3vw;
+    width: 15%;
+  }
+  
+  /* CAROUSEL1 */
+  /* carousel height */
+  .carousel-item{
+    height: 80vw;
+  }
+  /* carousel buttons */
+  .nextArrow{
+    top: 40vw;
+  }
+  .previousArrow{
+    top: 40vw;
+  }
+  /* carousel-caption */
+  .carousel-caption #heading1{
+    font-size: 10vw;
+  }
+  .carousel-caption #snippet{
+    font-size: 5vw;
+  }
+  .container .carousel-caption{
+    bottom: 15vw;
+  }
+  /* THAT SLIDER SECTION */
+  .slider{
+    top: 78vw;
+    left: 0; 
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    flex-direction: column;
+    padding: 2%;
+    border-radius: 3.5vw;
+    box-shadow: .1vw .1vw 2vw .2vw #2d2d2d;
+  }
+  .date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .date .selectDestination{
+    font-size: 5.5vw;
+  }
+  .date .dateT{
+    width: 39vw;
+    height: 100%;
+    font-size: 4vw;
+    border-radius: 10vw ;
+  }
+  .filters{
+    margin: 4% 0;
+  }
+  .filters button{
+    font-size: 3vw;
+    padding: 1%;
+    width: 30%;
+  }
+  .filters button .filterImg{
+    height: 4vw;
+  }
+  .price .range-slider .rangeInput{
+    height: 3.3vw;
+    width: 80%;
+    border: .6vw solid rgb(211,229,249);
+  }
+  .price .range-slider .rangeInput::-webkit-slider-thumb{
+    height: 6vw;
+    width: 6vw;
+  }
+  .price .range-slider .rangeInput::-moz-range-thumb{
+    height: 6vw;
+    width: 6vw;
+  }
+  .price .pricey{
+    padding:0  4%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .price .pricey .one,.two {
+    font-size: 5vw;
+  }
+  .price .checkboxT {
+    margin: 4% 0;
+  }
+  .price .checkboxT .promo{
+    transform: scale(2.5);
+  }
+  .price .checkboxT .promotionsL{
+    font-size: 5vw; 
+  }
+  /* POPULAR DESTINATIONS */
+  .popularDestinations{
+    margin-top: 70vw;
+  }
+  .grid{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5vw 4vw;
+  }
+  .grid .grid1 .content1{
+    flex: 2;
+  }
+  .grid .grid1 .content2 .head{
+    font-size: 7vw;
+  }
+  .grid .grid1 .content2 .snip{
+    font-size: 5vw;
+  }
+  .grid .grid1 .content2 .snip img{
+    height: 5vw;
+    width: 5vw;
+  }
+  .grid .grid1 .dividert{
+    height: .5vw;  
+  }
+  .grid .grid1 .content2 .snippy{
+    font-size: 2.5vw;
+    margin: 1vw 0;
+  }
+  .grid1 .content2 .dollar img{
+    margin-right: 1vw;
+  }
+  .grid1 .content2 .texty{
+    font-size: 2.5vw;
+    margin-top: 2.5vw;
+  }
+  .grid1 .content2 .bubu{
+    font-size: 3vw;
+    margin-top: 2vw;
+  }
+  .response .gridImage{
+    object-fit:cover;
+  }
+  .place{
+    font-size: 4.5vw;
+  }
+  .grid .response .cardBotLL{
+    font-size: 5vw;
+  }
+  .grid .response .cardBotL img{
+    padding: 0;
+    height: 5vw;
+    width: 5vw;
+    margin-right: 1vw;
+  }
+  .contSub{
+    font-size: 4vw;
+  }
+  .contSub img{
+    margin-right: 2vw;
+    padding: 0;
+    height: 4vw;
+    width: 4vw;
+  }
+  .response .bubu{
+    font-size: 4vw;
+  }
+  .rating{
+    left:-1vw;
+    top: 55vw;
+    text-align: center;
+    width: 35%;
+    font-size: 5.5vw;
+  }
+  .gridCard{
+    padding: 2vw;
+  }
+  .gridHeight{
+    height: 100%;
+  }
+  /* THE STUFF IN BETWEEN */
+  .more-button{
+    font-size: 5vw;
+  }
+  .what-to-offer{
+    font-size: 5.5vw;
+  }
+  .what-to-offer-txt{
+    font-size: 3.7vw;
+    padding: 0 25%;
+  }
+  /* CARDS */
+  .card-design{
+    height: 70vw;
+    width: 100%;
+    margin: 0 1vw;
+  }
+  .card-text{
+    /* transform: scale(1.2); */
+    font-size:3vw;
+    /* background-color: firebrick; */
+  }
+  .card-number{
+    font-size: 4vw;
+    padding: 3% 14%;
+  }
+  .center .review-h{
+    font-size: 7vw;
+  }
+  /* CAROUSEL2 IE REVIEWS */
+  .caReview .review-background{
+    height: 100%;
+  }
+  .caReview .review-p{
+    font-size: 3.3vw;
+  }
+  /* THE OTHER STUFF */
+  .funs{
+    font-size: 5vw;
+  }
+  /* PICTURE GALLERY */
+  .picture-gallery .txt{
+    font-size: 2.6vw;
+  }
+  /* THE STUFF IN BETWEEN */
+  .center .never-miss{
+    font-size: 5vw;
+  }
+  /* KEEP IN TOUCH */
+  .keep-in-touch  .email{
+    font-size: 2.2vw;
+  }
+  .keep-in-touch-p{
+    font-size: 4.5vw;
+  }
+  .keep-in-touch .send-btn{
+    font-size: 2.2vw;
+    margin-right: 1vw;
+  }
+  .travelgram-1-h,.travelgram-2-h{
+    font-size: 3.2vw;
+  }
+  .travelgram-1 .Ttxt{
+    font-size: 3vw;
+  }
+  .travelgram-2 ul{
+    font-size: 3vw;
+  }
+  /* SOCIALS */
+  .socials{
+    margin-top: 6vw;
+  }
+  .socials img{
+    transform: scale(1.4);
+  }
+  .socials .social .Stxt{
+    margin-top: 3vw;
+    font-size: 2.5vw;
+  }
 }

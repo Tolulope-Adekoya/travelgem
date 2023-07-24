@@ -13,44 +13,68 @@
     <body>
 <div id="pageFont">
     <header>
-        <nav class="navigation-bar-container"> 
-            <div class="navigation-bar" id="navColor">
-                <a href="index.html" class="travelgram nav-txt">Travelgem</a>
-                <div class="mid-section">
-                    <a href="#" class="destination nav-txt">destination</a>
-                    <a href="#" class="travel-deals nav-txt">travel deals</a>
-                    <a href="#" class="about us nav-txt">about us</a>
-                    <a href="#" class="blog nav-txt">blog</a>
-                </div>
-                <button id="navB">book now</button>
+        <nav>
+          <div class="navContainer" id="navColor">
+            <div class="company">
+              <a href="index.html" href="#">travelgem</a>
             </div>
+            <div class="midSection">
+              <a href="#">destination</a>
+              <a href="#">travel deals</a>
+              <a href="#">about us</a>
+              <a href="#">blog</a>
+            </div>
+            <div class="Bookbut">
+              <button>book now</button>
+            </div>
+            <div class="dropdown">
+              <button class="dropdown-btn">see more</button>
+              <div class="dropdown-content">
+                <a href="#">destination</a>
+                <a href="#">travel deals</a>
+                <a href="#">about us</a>
+                <a href="#">blog</a>
+                <button class="Bookbut2">book now</button>
+              </div>
+          </div>
+          </div>
         </nav>
         <div class="search-container">
-            <input type="text" class="search-input" placeholder="Where do you want to go?">
-            <button class="search-button">Search</button>
-            <img style="width: 1.5vw; height: 1.vw;" src="img/185040_map_pin_icon.svg"  alt="185040_map_pin_icon">
+            <div class="subber">
+                <img  class="searchimg" src="img/185040_map_pin_icon.svg"  alt="185040_map_pin_icon">
+                <input type="text" class="search-input" placeholder="Where do you want to go?">
+                <button class="search-button">Search</button>    
+            </div>
         </div>   
         <div class="buttons">
-            <img id="previousArrow" src="img/previous button white.svg" alt="previous arrow">
-            <img id="nextArrow" src="img/next button white.svg" alt="next arrow">
+            <img id="previousArrow" class="previousArrow" src="img/previous button white.svg" alt="previous arrow">
+            <img id="nextArrow" class="nextArrow" src="img/next button white.svg" alt="next arrow">
         </div>
-        <div class="slider display-flex-row">
+        <div class="slider">
             <div class="date">
-                <h1 id="selectDestination">select destination:</h1>
+                <h1 id="selectDestination" class="selectDestination">select destination:</h1>
                 <div class="center">
-                    <input type="date" id="dateT">
+                    <input type="date" class="dateT" id="dateT">
                 </div>
             </div>
             <div class="filters center">
-                <button class="display-flex-row center">more filters<img id="filterImg" src="img/filter icon white border no color.svg" alt="filter icon"></button>
+                <button class="display-flex-row center">more filters<img class="filterImg" src="img/filter icon white border no color.svg" alt="filter icon"></button>
             </div>
             <div class="price">
-                <p class="float-container">max price:<span class="currencySymbol">$</span><span class="rangeValue" id="rangeValue">50000</span></p>
+                <div class="pricey">
+                    <div class="one">
+                        <p>max price:</p>
+                    </div>
+                    <div class="two">
+                        <p>$</p>
+                        <p class="rangeValue" id="rangeValue">50000</p>
+                    </div>
+                </div>
                 <div class="range-slider center">
                     <input type="range" min="10000" max="1000000" value="500000" id="rangeInput" class="rangeInput" oninput="updateValue(this.value)">  
                 </div>
                 <div class="checkboxT">
-                    <input type="checkbox" id="promotions">
+                    <input type="checkbox" id="promotions" class="promo">
                     <label for="promotions" 
                     class="promotionsL">
                     see only promotions</label>
@@ -112,77 +136,77 @@
                         <img class="gridImage" src="img/vancouver water park.jpg" alt="vancouver">
                     </div>
                     <div class="content2">
-                        <p id="head">canada</p>
+                        <p class="head">canada</p>
                         <p class="snip" id="snip">
                             <img src="img/185040_map_pin_icon.svg" alt="map pin icon">
                             vancouver</p>
                         <div class="dividert"></div>
                         <p class="snippy" id="snippy">Aqua water park<span class="dollar"><img src="img/216364_plane_icon.svg" alt="plane icon">$300</span></p>
                         <div class="dividert"></div>
-                        <p id="texty">This water park is an absolute blast! with thrilling water rides, a lazy river, and a wave pool, you'll never run out of things to do. You can even grab a snack at the food stands or relax in one of the many lounge chairs. Trust us, you won't be disappointed!</p>
+                        <p id="texty" class="texty">This water park is an absolute blast! with thrilling water rides, a lazy river, and a wave pool, you'll never run out of things to do. You can even grab a snack at the food stands or relax in one of the many lounge chairs. Trust us, you won't be disappointed!</p>
                         <button class="bubu" id="bubu">book now</button>
                     </div>
                 </div>
-                <div class="grid2 gridHeight gridBox gridCard">
+                <div class="grid2 response gridHeight gridBox gridCard">
                     <div class="content1 multiThree">
                         <div class="place">canada</div>
                         <div class="rating">4.5</div>
-                        <img class="gridImage"  src="img/toronto.jpg" alt="norway">
+                        <img class="gridImage"  src="img/toronto.jpg" alt="toronto">
                     </div>
                     <div class="content2 cardBot multiOne">
                         <div class="cardBotL">
-                            <p id="cardBotL"><img src="img/185040_map_pin_icon.svg" alt="map pin icon">toronto</p>
+                            <p class="cardBotLL"><img src="img/185040_map_pin_icon.svg" alt="map pin icon">toronto</p>
                         </div>
                         <div class="contSub">
-                            <p id="contsub"><img src="img/216364_plane_icon.svg" alt="plane icon">$300</p>
-                            <button class="bubu" id="bubu">details</button>
+                            <p class="contsubL"><img src="img/216364_plane_icon.svg" alt="plane icon">$300</p>
+                            <button class="bubu" >details</button>
                         </div>
                     </div>
                 </div>
-                <div class="grid3 gridHeight gridBox gridCard">
+                <div class="grid3 response gridHeight gridBox gridCard">
                     <div class="content1 multiThree">
                         <div class="place">bahamas</div>
                         <div class="rating">4.8</div>
-                        <img class="gridImage"  src="img/nassau.jpg" alt="norway">
+                        <img class="gridImage"  src="img/nassau.jpg" alt="nassau">
                     </div>
                     <div class="content2 cardBot multiOne">
                         <div class="cardBotL">
-                            <p id="cardBotL"><img src="img/185040_map_pin_icon.svg" alt="map pin icon">nassau</p>
+                            <p class="cardBotLL"><img src="img/185040_map_pin_icon.svg" alt="map pin icon">nassau</p>
                         </div>
                         <div class="contSub">
-                            <p id="contsub"><img src="img/216364_plane_icon.svg" alt="plane icon">$300</p>
+                            <p class="contsubL"><img src="img/216364_plane_icon.svg" alt="plane icon">$300</p>
                             <button class="bubu" id="bubu">details</button>
                         </div>
                     </div>
                 </div>
-                <div class="grid4 gridHeight gridBox gridCard">
+                <div class="grid4 response gridHeight gridBox gridCard">
                     <div class="content1 multiThree">
                         <div class="place">maldives</div>
                         <div class="rating">5.0</div>
-                        <img class="gridImage"  src="img/ari atoll.jpg" alt="norway">
+                        <img class="gridImage"  src="img/ari atoll.jpg" alt="ari toll">
                     </div>
                     <div class="content2 cardBot multiOne">
                         <div class="cardBotL">
-                            <p id="cardBotL"><img src="img/185040_map_pin_icon.svg" alt="map pin icon">ari atoll</p>
+                            <p class="cardBotLL"><img src="img/185040_map_pin_icon.svg" alt="map pin icon">ari atoll</p>
                         </div>
                         <div class="contSub">
-                            <p id="contsub"><img src="img/216364_plane_icon.svg" alt="plane icon">$300</p>
+                            <p class="contsubL"><img src="img/216364_plane_icon.svg" alt="plane icon">$300</p>
                             <button class="bubu" id="bubu">details</button>
                         </div>
                     </div>
                 </div>
-                <div class="grid5 gridHeight gridBox gridCard">
+                <div class="grid5 response gridHeight gridBox gridCard">
                     <div class="content1 multiThree">
                         <div class="place">hawaii</div>
                         <div class="rating">4.5</div>
-                        <img class="gridImage"  src="img/honolulu.jpg" alt="norway">
+                        <img class="gridImage"  src="img/honolulu.jpg" alt="honolulu">
                     </div>
                     <div class="content2 cardBot multiOne">
                         <div class="cardBotL">
-                            <p id="cardBotL"><img src="img/185040_map_pin_icon.svg" alt="map pin icon">honolulu</p>
+                            <p class="cardBotLL"><img src="img/185040_map_pin_icon.svg" alt="map pin icon">honolulu</p>
                         </div>
                         <div class="contSub">
-                            <p id="contsub"><img src="img/216364_plane_icon.svg" alt="plane icon">$300</p>
+                            <p class="contsubL"><img src="img/216364_plane_icon.svg" alt="plane icon">$300</p>
                             <button class="bubu" id="bubu">details</button>
                         </div>
                     </div>
@@ -195,7 +219,7 @@
     <div class="center">
         <p class="big-text what-to-offer">What we have to offer</p>
     </div>
-    <div class="center what-to-offer-txt" id="small-text">
+    <div class="center what-to-offer-txt small-text">
         <p class="grey-txt">We offer a variety of things which you can get on a solo trip or a family trip</p>
     </div>
     <div class="cards-container display-flex-row flex-space-between">
@@ -204,34 +228,34 @@
                 <p class="num-space"></p>
                 <span class="card-number">1</span>
             </div>
-            <p class="text1 card-text" id="small-text"></p>
+            <p class="text1 card-text"></p>
         </div>
         <div class="card-design card-hover middle">
             <div class="num-container display-flex-row">
                 <p class="num-space"></p>
                 <span class="card-number">2</span>
             </div>
-            <p class="text2 card-text" id="small-text"></p>
+            <p class="text2 card-text"></p>
         </div>
         <div class="card-design card-hover middle">
             <div class="num-container display-flex-row">
                 <p class="num-space"></p>
                 <span class="card-number">3</span>
             </div>
-            <p class="text3 card-text" id="small-text"></p>
+            <p class="text3 card-text"></p>
         </div>
         <div class="card-design card-hover right-end">
             <div class="num-container display-flex-row">
                 <p class="num-space"></p>
                 <span class="card-number">4</span>
             </div>
-            <p class="text4 card-text" id="small-text"></p>
+            <p class="text4 card-text"></p>
         </div>
     </div>
     <div class="center">
         <h1 class="review-h grey-txt">Reviews</h1>
     </div>
-    <div id="carousel2" class="carousel my-carousel-edit slide" data-bs-ride="carousel">
+    <div id="carousel2" class="carousel my-carousel-edit slide caReview" data-bs-ride="carousel">
         <div id="carBut" class="carousel-indicators">
             <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -328,10 +352,10 @@
         </button>
     </div>        
     <div class="center">
-        <h1 class="grey-txt" id="medium-text">Fun stuff</h1>
+        <h1 class="grey-txt medium-text funs">Fun stuff</h1>
     </div>
     <div class="center">
-        <h1  id="medium-text">Our top programs</h1>
+        <h1  class="medium-text funs">Our top programs</h1>
     </div>
     <div class="picture-gallery">
         <div class="actual-photo photo1 photo-n">
@@ -363,33 +387,31 @@
             <p class="txt black-txt">beach parties</p>
         </div>
     </div>
-    <footer>
         <div class="center">
-            <h1 class="never-miss grey-txt" id="never-miss">Never miss a thing!!!</h1>
+            <h1 class="never-miss grey-txt">Never miss a thing!!!</h1>
         </div>
         <div class="center">
             <div class="keep-in-touch display-flex-row">    
                 <div class="center">
-                    <p id="keep-in-touch-p">Keep in touch</p>
+                    <p class="keep-in-touch-p">Keep in touch</p>
                 </div>
                 <div class="center input-cont">
-                    <input type="text" id="email" name="email" placeholder="email@gmail.com">
+                    <input type="text" id="email" class="email" name="email" placeholder="email@gmail.com">
                 <input type="submit" value="send" class="send-btn">
                 </div>
             </div>
         </div>
-        <footer>
         <div class="bottom display-flex-row">
             <div class="travelgram-1">
-                <h1 id="travelgram-1-h">Travelgem</h1>
-                <p>Experience travel that enriches your life and broadens 
+                <h1 class="travelgram-1-h">Travelgem</h1>
+                <p class="Ttxt">Experience travel that enriches your life and broadens 
                     your perspective. Join us for personalized planning, 
                     expert guidance, exclusive access , and 24/7 support 
                     on your journey of discovery and adventure</p>
             </div>
             <div class="center travelgram-22">
                 <div class="travelgram-2">
-                    <h1 id="travelgram-2-h" class="center">our agency</h1>
+                    <h1 class=" travelgram-2-h center">our agency</h1>
                     <ul>
                         <li><a href="#">services</a></li>
                         <li><a href="#">insurance</a></li>
@@ -404,18 +426,17 @@
         <div class="socials center">
             <div class="social">
                 <img src="img/instagram svg icon black and white 1.0.svg" alt="instagram">
-                contact us on instagram
+                <p class="Stxt">contact us on instagram </p>
             </div>
             <div class="social">
                 <img src="img/facebook black f (1).svg" alt="facebook">
-                contact us on facebook
+                <p class="Stxt">contact us on facebook</p>
             </div>
             <div class="social">
                 <img src="img/twitter bird black.svg" alt="twitter">
-                contact us on twitter
+                <p class="Stxt">contact us on twitter</p>
             </div>
         </div>
-    </footer>
     <br>
 </div>
     </body>
