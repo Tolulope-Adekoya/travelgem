@@ -1206,6 +1206,9 @@ body{
     font-size: 5vw;
   }
   /* KEEP IN TOUCH */
+  .keep-in-touch{
+    justify-content: space-between;
+  }
   .keep-in-touch  .email{
     font-size: 2.2vw;
   }
