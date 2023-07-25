@@ -97,6 +97,13 @@ body{
 }
 .navContainer .company a{
   font-size: 1.6vw;
+  border-radius: 1vw;
+}
+.navContainer .company a:hover{
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
 .navContainer .midSection{
   display: flex;
@@ -290,6 +297,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 1%;
+    gap: 2vw;
   }
   .price .pricey{
     display: flex;
@@ -300,6 +309,12 @@ body{
     font-size: 1.5vw;
     text-transform: capitalize;
     font-weight: 600;
+  }
+  .price .pricey .one p{
+    margin: 0;
+  }
+  .price .pricey .two p{
+    margin: 0;
   }
   .price .pricey .two{
     display: flex;
@@ -346,14 +361,13 @@ body{
     border-radius: 2vw;
     background:  rgb(59,153,243);
   }
+  /* CHECKBOX */
+  .checkboxT{
+    align-self: center;
+  }
   .promotionsL{
     font-size: 1.5vw;
     text-transform: capitalize;
-  }
-  /* CHECKBOX */
-  #promotions {
-    width: 2vw;
-    height: 2vw;
   }
   /* THE POPULAR DESTINATIONS */
   .popularDestinations{
@@ -544,13 +558,16 @@ body{
   }
   /* CARDS */
   .cards-container{
-    margin: 0 3vw;
+    margin: 0 1vw;
     margin-bottom: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
   .card-design{
     width: 23%;
     padding: 1%;
-    height: 35vw;
+    height: 36vw;
     border: .2vw solid rgb(116, 186, 237);
     border-radius: 2vw;
     transition:background-color 0.2s ease, border 0.3s ease, border-radius 0.3s ease;
@@ -585,7 +602,10 @@ body{
   .left-end:hover{
     border-radius: 2vw 0 0 2vw;
   }
-  .middle:hover{
+  .middle2:hover{
+    border-radius: 0 0 0 0;
+  }
+  .middle3:hover{
     border-radius: 0 0 0 0;
   }
   .right-end:hover{
@@ -686,6 +706,10 @@ body{
 .actual-photo{
   position: relative;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.actual-photo:hover{
+  transform: scale(1.02);
 }
 .picture-gallery .txt{  
   position: absolute;
@@ -762,14 +786,15 @@ body{
   padding: 2% 5%;
   margin-left: 1vw;
   background-color: white;
-  border: none;
+  border: .1vw solid white;
   border-radius: .8vw;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 .send-btn:hover{
   background-color: rgb(112, 182, 248);
   border: .1vw solid white;
   color: white;
+  transform: scale(1.1);
 }
 .bottom{
   margin-left: 11vw;
@@ -808,30 +833,25 @@ body{
   margin-left: -4vw;
   font-weight: 700;
 }
+/* SOCIALS */
 .socials{
-  font-size: 1.3vw;
   margin-top: 3vw;
 }
-/* SOCIALS */
-.social{
-  margin-left: 4vw;
-  margin-right: 4vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.socials .Stxt{
+  font-size: 2vw;
+}
+.socialflex{
+  display: flex; 
+  justify-content: space-evenly;
+  margin-top: 3vw;
 }
 .social img{
-  width: 10vw;
-  height: 10vw;
-  border-radius: 1vw;
-  transition: background-color 0.3s ease;
-}
-.social {
-  text-transform: capitalize;
+  width: 7vw;
+  height: 7vw;
+  transition: all 0.3s ease;
 }
 .social img:hover{
-  box-shadow: 0 0 2px 2px rgb(209, 210, 219);
+  transform: scale(1.3);
   cursor: pointer;
 }
 .header-rule{
@@ -880,13 +900,14 @@ body{
   .navContainer .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(3, 7, 10, 0.1);
+    background-color: rgba(159, 168, 174, 0.1);
     z-index: 1;
     padding: 1vw;
     text-align: center;
   }
   .navContainer .dropdown-content a {
-    color: white;
+    background-color: white;
+    color: black;
     text-decoration: none;
     transition: all 0.3s ease;
     font-size: 3vw;
@@ -894,26 +915,26 @@ body{
     line-height: 2;
   }
   .navContainer .dropdown-content a:hover {
-    background-color: black;
     color: white;
+    background-color: black;
   }
   .navContainer .dropdown:hover .dropdown-content {
     display: block;
   }
   .navContainer .dropdown-content button{
-    background-color: rgba(3, 7, 10, 0.1);
-    color: white;
+    background-color: white;
+    color: black;
     text-transform: capitalize;
     font-size: 3vw;
-    padding: 0 3vw;
     border: .1vw solid white;
     border-radius: 1vw;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     margin-top: 1vw;
   }
   .navContainer .dropdown-content button:hover{
     background-color: black;
     color: white;
+    transform: scale(1.1);
   }
   /* SEARCH BAR */
   /* search container */
@@ -974,10 +995,9 @@ body{
     left: 0; 
     width: 100%;
     box-shadow: none;
-    border-radius: 0;
     flex-direction: column;
     padding: 2%;
-    border-radius: 3.5vw;
+    border-radius: 0;
     box-shadow: .1vw .1vw 2vw .2vw #2d2d2d;
   }
   .date{
@@ -986,7 +1006,7 @@ body{
     justify-content: space-around;
   }
   .date .selectDestination{
-    font-size: 5.5vw;
+    font-size: 4vw;
   }
   .date .dateT{
     width: 39vw;
@@ -998,25 +1018,25 @@ body{
     margin: 4% 0;
   }
   .filters button{
-    font-size: 3vw;
-    padding: 1%;
-    width: 30%;
+    font-size: 2.5vw;
+    padding: 0.5%;
+    width: 21%;
   }
   .filters button .filterImg{
     height: 4vw;
   }
   .price .range-slider .rangeInput{
-    height: 3.3vw;
+    height: 2vw;
     width: 80%;
     border: .6vw solid rgb(211,229,249);
   }
   .price .range-slider .rangeInput::-webkit-slider-thumb{
-    height: 6vw;
-    width: 6vw;
+    height: 2.5vw;
+    width: 2.5vw;
   }
   .price .range-slider .rangeInput::-moz-range-thumb{
-    height: 6vw;
-    width: 6vw;
+    height: 2.5vw;
+    width: 2.5vw;
   }
   .price .pricey{
     padding:0  4%;
@@ -1024,16 +1044,10 @@ body{
     justify-content: space-between;
   }
   .price .pricey .one,.two {
-    font-size: 5vw;
-  }
-  .price .checkboxT {
-    margin: 4% 0;
-  }
-  .price .checkboxT .promo{
-    transform: scale(2.5);
+    font-size: 4vw;
   }
   .price .checkboxT .promotionsL{
-    font-size: 5vw; 
+    font-size: 3vw;
   }
   /* POPULAR DESTINATIONS */
   .popularDestinations{
@@ -1041,7 +1055,7 @@ body{
   }
   .grid{
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
     gap: 5vw 4vw;
   }
   .grid .grid1 .content1{
@@ -1062,24 +1076,33 @@ body{
   }
   .grid .grid1 .content2 .snippy{
     font-size: 2.5vw;
-    margin: 1vw 0;
+    margin: 1.3vw 0;
+    align-items: center;
   }
   .grid1 .content2 .dollar img{
+    transform: scale(.9);
+    margin: 0;
+    margin-bottom: 1vw;
     margin-right: 1vw;
   }
   .grid1 .content2 .texty{
-    font-size: 2.5vw;
+    font-size: 3vw;
     margin-top: 2.5vw;
   }
   .grid1 .content2 .bubu{
-    font-size: 3vw;
+    font-size: 3.5vw;
+    padding: 5%;
     margin-top: 2vw;
   }
   .response .gridImage{
-    object-fit:cover;
+    object-fit:contain;
   }
-  .place{
-    font-size: 4.5vw;
+  .response1 .content1 .gridImage{
+    width: 100%;
+    height: 100%;
+  }
+  .response{
+    height: 50vw;
   }
   .grid .response .cardBotLL{
     font-size: 5vw;
@@ -1104,15 +1127,18 @@ body{
   }
   .rating{
     left:-1vw;
-    top: 55vw;
+    top: 24vw;
     text-align: center;
     width: 35%;
-    font-size: 5.5vw;
+    font-size: 4vw;
+  }
+  .place{
+    font-size:3vw;
   }
   .gridCard{
     padding: 2vw;
   }
-  .gridHeight{
+  .response1 {
     height: 100%;
   }
   /* THE STUFF IN BETWEEN */
@@ -1127,19 +1153,35 @@ body{
     padding: 0 25%;
   }
   /* CARDS */
+  .cards-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw 3vw;
+  }
   .card-design{
-    height: 70vw;
+    height: 43vw;
     width: 100%;
-    margin: 0 1vw;
+    padding: 2%;
   }
   .card-text{
-    /* transform: scale(1.2); */
     font-size:3vw;
-    /* background-color: firebrick; */
   }
   .card-number{
     font-size: 4vw;
-    padding: 3% 14%;
+    padding: 5% 10%;
+  }
+  .left-end:hover{
+    border-radius: 3vw 0vw 0vw 0vw;
+  }
+  .middle2:hover{
+    border-radius: 0 3vw 0 0;
+  }
+  .middle3:hover{
+    border-radius: 0 0 0 3vw;
+  }
+  .right-end:hover{
+    border-radius: 0 0 3vw 0;
   }
   .center .review-h{
     font-size: 7vw;
@@ -1184,14 +1226,14 @@ body{
     font-size: 3vw;
   }
   /* SOCIALS */
-  .socials{
-    margin-top: 6vw;
+  .social img{
+    width: 10vw;
+    height: 10vw;
   }
-  .socials img{
-    transform: scale(1.4);
+  .socials .Stxt{
+    font-size: 3vw;
   }
-  .socials .social .Stxt{
-    margin-top: 3vw;
-    font-size: 2.5vw;
+  .socialflex{
+    margin-top: 5vw;
   }
 }
