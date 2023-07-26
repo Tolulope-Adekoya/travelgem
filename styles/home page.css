@@ -6,7 +6,7 @@ body{
     border-bottom: 0.1rem solid black;
     margin: 0;
   }
-  #pageFont{
+  body .pageFont{
     font-family: 'Belanosima';
   }
   .center{
@@ -475,6 +475,12 @@ body{
   .bubu:hover{
     background-color: rgb(47, 60, 250);
   }
+  .grid .gridImage{
+    transition: all 0.3s ease;
+  }
+  .grid .gridImage:hover{
+    transform: scale(1.02);
+  }
   .grid1{
     grid-column: span 2;
     padding: 1vw;
@@ -580,8 +586,11 @@ body{
     padding: 5% 15%;
     transition: color 0.3s ease-in-out;
   } 
+  .card-hover{
+    transition: 0.3s ease all;
+  }
   .card-hover .card-number{
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
   }
   .card-hover:hover .card-number{
     background-color: white;
@@ -598,6 +607,7 @@ body{
   .card-hover:hover{
     background-color:  rgb(59, 153, 243);
     border: none;
+    transform: scale(1.1);
   }
   .left-end:hover{
     border-radius: 2vw 0 0 2vw;
@@ -612,9 +622,9 @@ body{
     border-radius: 0 2vw 2vw 0;
   }
   .card-hover:hover .card-text{
-    margin: 3vw 0 0 0;
     text-align: left;
     color: white;
+    padding-left: 4%;
   }
   .text1::before{
     content: "Guidance";
@@ -710,6 +720,13 @@ body{
 }
 .actual-photo:hover{
   transform: scale(1.02);
+}
+.actual-photo:hover .txt{
+  transition: all 0.3s ease;
+}
+.actual-photo:hover .txt{
+transform: translateX(-20%)scale(1.2);
+/* transform: scale(1.5); */
 }
 .picture-gallery .txt{  
   position: absolute;
@@ -882,6 +899,9 @@ body{
 {
 } */
 @media (max-width:576px) {
+  body .pageFont{
+    margin: 0 1vw;
+  }
   /* NAVIGATION BAR */
   .navContainer{
     display: flex;
@@ -1010,13 +1030,14 @@ body{
   /* THAT SLIDER SECTION */
   .slider{
     top: 78vw;
-    left: 0; 
-    width: 100%;
+    left: 5vw; 
+    width: 90%;
     box-shadow: none;
     flex-direction: column;
     padding: 2%;
-    border-radius: 0;
-    box-shadow: .1vw .1vw 2vw .2vw #2d2d2d;
+    border-radius: 2vw;
+    border:  .1vw solid black;
+    /* box-shadow: .1vw .1vw 2vw .2vw #2d2d2d; */
   }
   .date{
     display: flex;
@@ -1073,11 +1094,11 @@ body{
   }
   .grid{
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
     gap: 5vw 4vw;
   }
-  .grid .grid1 .content1{
-    flex: 2;
+  .grid .grid1{
+    grid-row: span 2;
+    display: flex;
   }
   .grid .grid1 .content2 .head{
     font-size: 7vw;
@@ -1093,7 +1114,7 @@ body{
     height: .5vw;  
   }
   .grid .grid1 .content2 .snippy{
-    font-size: 2.5vw;
+    font-size: 3vw;
     margin: 1.3vw 0;
     align-items: center;
   }
@@ -1104,13 +1125,19 @@ body{
     margin-right: 1vw;
   }
   .grid1 .content2 .texty{
-    font-size: 3vw;
+    text-align: center;
+    font-size: 2.8vw;
     margin-top: 2.5vw;
+  }
+  .grid .grid1 .content2 .bucen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .grid1 .content2 .bubu{
     font-size: 3.5vw;
     padding: 5%;
-    margin-top: 2vw;
+    /* margin-top: 2vw; */
   }
   .response .gridImage{
     object-fit:contain;
@@ -1188,6 +1215,9 @@ body{
   .card-number{
     font-size: 4vw;
     padding: 5% 10%;
+  }
+  .card-hover:hover{
+    transform: scale(1.04);
   }
   .left-end:hover{
     border-radius: 3vw 0vw 0vw 0vw;
