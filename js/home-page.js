@@ -1,6 +1,6 @@
 // FOR THE NAVIGATION BAR
 const scrollThreshold = 50; 
-//this is to Change the value to the desired scroll threshold in viewport width, it does not have to be 50, this just works foe me
+//this is to Change the value to the desired scroll threshold in viewport width, it does not have to be 50, this just works for me
 window.addEventListener('scroll', function() {
   var object = document.getElementById('navColor');
   var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
